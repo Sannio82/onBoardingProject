@@ -25,7 +25,7 @@ final class OnboardingManager: ObservableObject {
             .init(emoji: "👋",
                   title: "Welcome to the best app!!!",
                   content: "Här kommer all text stå från listan som är utbytbar!"),
-            .init(emoji: "💋",
+            .init(emoji: "🚘",
                   title: "Welcome to the second page of the best app!",
                   content: "Och här har vi då såklart lite mer info!"),
             .init(emoji: "🧚🏾‍♀️",

@@ -16,6 +16,7 @@ struct OnboardingInfoView: View {
             
             Text(item.emoji)
                 .font(.system(size: 150))
+                .padding()
             
             Text(item.title)
                 .font(.system(size: 35,
@@ -27,14 +28,17 @@ struct OnboardingInfoView: View {
                 .font(.system(size: 18,
                               weight: .light,
                               design: .rounded))
+                .padding()
 
             
             Button {
                              print("Knappen tryckt!")
                          } label: {
                              Text("Gå framåt!")
-                                
-                                 .font(.system(size: 25))
+                                 
+                                 .font(.system(size: 25,
+                                               weight: .bold,
+                                               design: .rounded))
                                  .scaledToFit()
                                  .cornerRadius(32)
                                  .padding()
@@ -43,13 +47,11 @@ struct OnboardingInfoView: View {
                                  .cornerRadius(8)
                              
                          }
-                         .padding(30)
-            
+                         .padding(50)
         }
         .multilineTextAlignment(.center)
         .foregroundColor(.white)
         .padding()
-        
        
         
     }
