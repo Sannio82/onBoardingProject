@@ -9,26 +9,18 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-      
-            
-    
-                VStack {
-                    Text("Testing testing!")
-                        .font(.largeTitle)
-                    Button("Hej hej allihopa") {
-                }
-                    .buttonStyle(.borderedProminent)
-                    .controlSize(.large)
-                }
         
-  
+        OnboardingView()
+           
 }
+       
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
-.previewInterfaceOrientation(.portraitUpsideDown)
+            .previewInterfaceOrientation(.portrait)
+            
     }
 }
 

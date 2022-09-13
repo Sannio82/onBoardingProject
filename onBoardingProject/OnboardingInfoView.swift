@@ -16,6 +16,7 @@ struct OnboardingInfoView: View {
             
             Text(item.emoji)
                 .font(.system(size: 150))
+                .padding()
             
             Text(item.title)
                 .font(.system(size: 35,
@@ -27,31 +28,28 @@ struct OnboardingInfoView: View {
                 .font(.system(size: 18,
                               weight: .light,
                               design: .rounded))
-
-            
+                .padding()
             Button {
-                             print("Knappen tryckt!")
-                         } label: {
-                             Text("Gå framåt!")
-                                
-                                 .font(.system(size: 25))
-                                 .scaledToFit()
-                                 .cornerRadius(32)
-                                 .padding()
-                                 .foregroundColor(.orange)
-                                 .background(.white)
-                                 .cornerRadius(8)
-                             
-                         }
-                         .padding(30)
-            
+                            } label: {
+                Text("Gå framåt!")
+                
+                    .font(.system(size: 25,
+                                  weight: .bold,
+                                  design: .rounded))
+                    .scaledToFit()
+                    .cornerRadius(32)
+                    .padding()
+                    .foregroundColor(.orange)
+                    .background(.white)
+                    .cornerRadius(8)
+            }
+            .padding(10)
         }
+        .cornerRadius(8)
         .multilineTextAlignment(.center)
         .foregroundColor(.white)
+        .background(.blue)
         .padding()
-        
-       
-        
     }
 }
 
@@ -59,8 +57,9 @@ struct OnboardingInfoView_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingInfoView(item: .init(emoji: "👋",
                                        title: "Join the best app",
-                                       content: "Här kommer texten stå som kommer som en utbytbar lista!"))
+                                       content: "Här kommer texten stå som kommer som en utbytbar lista!",
+                                       tag: (1)))
             .previewLayout(.sizeThatFits)
-            .background(.blue)
+            .background(.white)
     }
 }
