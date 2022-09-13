@@ -13,7 +13,7 @@ struct OnboardingItem: Identifiable {
     let emoji: String
     let title: String
     let content: String
-
+    let tag: Int
 }
 
 final class OnboardingManager: ObservableObject {
@@ -24,13 +24,16 @@ final class OnboardingManager: ObservableObject {
         items = [
             .init(emoji: "👋",
                   title: "Welcome to the best app!!!",
-                  content: "Här kommer all text stå från listan som är utbytbar!"),
+                  content: "Här kommer all text stå från listan som är utbytbar!",
+                  tag: (0)),
             .init(emoji: "🚘",
                   title: "Welcome to the second page of the best app!",
-                  content: "Och här har vi då såklart lite mer info!"),
+                  content: "Och här har vi då såklart lite mer info!",
+                  tag: (1)),
             .init(emoji: "🧚🏾‍♀️",
                   title: "Welcome to the thiiiiiird page of the best app",
-                  content: "Och här kommer då ääääännu mer info"),
+                  content: "Och här kommer då ääääännu mer info",
+                  tag: (2)),
         ]
     }
 }
